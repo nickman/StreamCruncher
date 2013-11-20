@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite failures="0" time="1,859.043" errors="0" skipped="173" tests="178" name="TestSuite">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="c:\java\jdk1.6.0_30\jre\bin"/>
+    <property name="java.vm.version" value="20.5-b03"/>
+    <property name="java.vm.vendor" value="Sun Microsystems Inc."/>
+    <property name="java.vendor.url" value="http://java.sun.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="java.rmi.server.randomIDs" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="c:\hprojects\SC"/>
+    <property name="java.runtime.version" value="1.6.0_30-b12"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="basedir" value="c:\hprojects\SC"/>
+    <property name="java.endorsed.dirs" value="c:\java\jdk1.6.0_30\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="surefire.real.class.path" value="c:\hprojects\SC\target\surefire\surefirebooter4082034453495490127.jar"/>
+    <property name="java.io.tmpdir" value="c:\temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Sun Microsystems Inc."/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 7"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="c:\java\jdk1.6.0_30\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;c:\tools\maven\apache-maven-3.0.3\bin;C:\DataStax\jre\bin;C:\DataStax\python\;c:\tools\git\bin;C:\Java\jdk1.6.0_30\bin;C:\tools\SlikSvn\bin\;C:\csvn\bin\;C:\csvn\Python25\;C:\oracle\app\nwhitehe\product\11.2.0\dbhome_1\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;c:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files (x86)\NTRU Cryptosystems\NTRU TCG Software Stack\bin\;C:\Program Files\NTRU Cryptosystems\NTRU TCG Software Stack\bin\;C:\Program Files\Wave Systems Corp\Gemalto\Access Client\v5\;C:\libs\java\ant\apache-ant-1.8.0\bin;c:\cygwin\bin;c:\java\jdk1.6.0_21;c:\groovy\Groovy-1.7.4\bin;C:\libs\java\apache-maven-2.2.1\bin;c:\tools\exploder\bin;C:\tools\StarTeam2009\SDK\StarTeam SDK 11.0\Lib;C:\tools\StarTeam2009\SDK\StarTeam SDK 11.0\Bin;C:\tools\TortoiseHg\;C:\Program Files (x86)\Enterprise Vault\EVClient\;C:\tools\strawberry\c\bin;C:\tools\strawberry\perl\site\bin;C:\tools\strawberry\perl\bin;C:\Program Files (x86)\QuickTime\QTSystem\;C:\tools\GnuPG\pub;C:\tools\Graphviz\bin;C:\Tools\TortoiseGit\bin;C:\Groovy\Groovy-1.8.5\bin;c:\Program Files\Microsoft Windows Performance Toolkit\;c:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Go\bin;C:\tools\Lua\5.1;C:\tools\Lua\5.1\clibs;C:\tools\Mercurial\;C:\Program Files (x86)\Common Files\Acronis\SnapAPI\;C:\tools\UltraEdit\;C:\tools\UltraCompare\;."/>
+    <property name="surefire.test.class.path" value="c:\hprojects\SC\target\test-classes;c:\hprojects\SC\target\classes;C:\Users\nwhitehe\.m2\repository\junit\junit\4.8.2\junit-4.8.2.jar;C:\Users\nwhitehe\.m2\repository\org\testng\testng\5.1\testng-5.1-jdk15.jar;C:\Users\nwhitehe\.m2\repository\com\h2database\h2\1.3.160\h2-1.3.160.jar;C:\Users\nwhitehe\.m2\repository\commons-collections\commons-collections\3.2.1\commons-collections-3.2.1.jar;C:\Users\nwhitehe\.m2\repository\commons-dbcp\commons-dbcp\1.3\commons-dbcp-1.3.jar;C:\Users\nwhitehe\.m2\repository\commons-pool\commons-pool\1.5.4\commons-pool-1.5.4.jar;C:\Users\nwhitehe\.m2\repository\commons-math\commons-math\1.1\commons-math-1.1.jar;C:\Users\nwhitehe\.m2\repository\commons-logging\commons-logging\1.0.3\commons-logging-1.0.3.jar;C:\Users\nwhitehe\.m2\repository\commons-discovery\commons-discovery\0.2\commons-discovery-0.2.jar;C:\Users\nwhitehe\.m2\repository\antlr\antlr\2.7.6\antlr-2.7.6.jar;C:\Users\nwhitehe\.m2\repository\javassist\javassist\3.6.0.GA\javassist-3.6.0.GA.jar;C:\Users\nwhitehe\.m2\repository\ognl\ognl\2.7.1\ognl-2.7.1.jar;C:\Users\nwhitehe\.m2\repository\org\helios\helios-jmx\1.0-SNAPSHOT\helios-jmx-1.0-SNAPSHOT.jar;C:\Users\nwhitehe\.m2\repository\trove\trove\3.0.0\trove-3.0.0.jar;C:\Users\nwhitehe\.m2\repository\org\helios\helios-util\1.0-SNAPSHOT\helios-util-1.0-SNAPSHOT.jar;C:\Users\nwhitehe\.m2\repository\log4j\log4j\1.2.16\log4j-1.2.16.jar;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="50.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="6.1"/>
+    <property name="user.home" value="C:\Users\nwhitehe"/>
+    <property name="user.timezone" value="America/New_York"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.6"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="user.name" value="nwhitehe"/>
+    <property name="java.class.path" value="c:\hprojects\SC\target\test-classes;c:\hprojects\SC\target\classes;C:\Users\nwhitehe\.m2\repository\junit\junit\4.8.2\junit-4.8.2.jar;C:\Users\nwhitehe\.m2\repository\org\testng\testng\5.1\testng-5.1-jdk15.jar;C:\Users\nwhitehe\.m2\repository\com\h2database\h2\1.3.160\h2-1.3.160.jar;C:\Users\nwhitehe\.m2\repository\commons-collections\commons-collections\3.2.1\commons-collections-3.2.1.jar;C:\Users\nwhitehe\.m2\repository\commons-dbcp\commons-dbcp\1.3\commons-dbcp-1.3.jar;C:\Users\nwhitehe\.m2\repository\commons-pool\commons-pool\1.5.4\commons-pool-1.5.4.jar;C:\Users\nwhitehe\.m2\repository\commons-math\commons-math\1.1\commons-math-1.1.jar;C:\Users\nwhitehe\.m2\repository\commons-logging\commons-logging\1.0.3\commons-logging-1.0.3.jar;C:\Users\nwhitehe\.m2\repository\commons-discovery\commons-discovery\0.2\commons-discovery-0.2.jar;C:\Users\nwhitehe\.m2\repository\antlr\antlr\2.7.6\antlr-2.7.6.jar;C:\Users\nwhitehe\.m2\repository\javassist\javassist\3.6.0.GA\javassist-3.6.0.GA.jar;C:\Users\nwhitehe\.m2\repository\ognl\ognl\2.7.1\ognl-2.7.1.jar;C:\Users\nwhitehe\.m2\repository\org\helios\helios-jmx\1.0-SNAPSHOT\helios-jmx-1.0-SNAPSHOT.jar;C:\Users\nwhitehe\.m2\repository\trove\trove\3.0.0\trove-3.0.0.jar;C:\Users\nwhitehe\.m2\repository\org\helios\helios-util\1.0-SNAPSHOT\helios-util-1.0-SNAPSHOT.jar;C:\Users\nwhitehe\.m2\repository\log4j\log4j\1.2.16\log4j-1.2.16.jar;"/>
+    <property name="java.vm.specification.version" value="1.0"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="c:\java\jdk1.6.0_30\jre"/>
+    <property name="sun.java.command" value="c:\hprojects\SC\target\surefire\surefirebooter4082034453495490127.jar c:\hprojects\SC\target\surefire\surefire2294397367551103760tmp c:\hprojects\SC\target\surefire\surefire3540253208891454278tmp"/>
+    <property name="java.specification.vendor" value="Sun Microsystems Inc."/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.6.0_30"/>
+    <property name="java.ext.dirs" value="c:\java\jdk1.6.0_30\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="c:\java\jdk1.6.0_30\jre\lib\resources.jar;c:\java\jdk1.6.0_30\jre\lib\rt.jar;c:\java\jdk1.6.0_30\jre\lib\sunrsasign.jar;c:\java\jdk1.6.0_30\jre\lib\jsse.jar;c:\java\jdk1.6.0_30\jre\lib\jce.jar;c:\java\jdk1.6.0_30\jre\lib\charsets.jar;c:\java\jdk1.6.0_30\jre\lib\modules\jdk.boot.jar;c:\java\jdk1.6.0_30\jre\classes"/>
+    <property name="java.vendor" value="Sun Microsystems Inc."/>
+    <property name="localRepository" value="C:\Users\nwhitehe\.m2\repository"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://java.sun.com/cgi-bin/bugreport.cgi"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase time="0" classname="streamcruncher.test.func.oracle.OracleSlidingWFEvtDropTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.002" classname="streamcruncher.test.func.h2.H2TimeWindowFPerfTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.002" classname="streamcruncher.test.func.pointbase.PointBaseSlidingNewWindowFPerfTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.002" classname="streamcruncher.test.func.h2.H2ReStockAlertTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.002" classname="streamcruncher.test.func.solid.SolidOAFJoinTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.002" classname="streamcruncher.test.func.oracle.OracleCaseWhenClauseTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.002" classname="streamcruncher.test.func.oracle.OracleRandomRowsWindowFTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.003" classname="streamcruncher.test.func.mysql.MySQLSlidingWF1PartitionTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.003" classname="streamcruncher.test.func.derby.DerbyTimeWF1ChainedPartitionTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.003" classname="streamcruncher.test.func.solid.SolidShipmentAggregatorTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.003" classname="streamcruncher.test.func.pointbase.PointBaseTimeWF1PartitionTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.003" classname="streamcruncher.test.func.oracle.OracleLowestRowsWindowFTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.003" classname="streamcruncher.test.func.h2.H2SlidingNewWindowFPerfTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.003" classname="streamcruncher.test.nonfunc.h2.H2StartupShutdown3Test" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.003" classname="streamcruncher.test.func.firebird.FirebirdTimeWF2PartitionAggTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.003" classname="streamcruncher.test.func.oracle.OracleSlidingDeadWindowFTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.003" classname="streamcruncher.test.func.h2.H2PreFilterSyntaxTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.003" classname="streamcruncher.test.func.mysql.MySQLTumblingWindowFTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.003" classname="streamcruncher.test.func.oraclett.OracleSlidingWF1PartitionTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.003" classname="streamcruncher.test.func.solid.SolidReStockAlertTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.003" classname="streamcruncher.test.func.h2.H2SLAAlertCorrelationTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.003" classname="streamcruncher.test.func.oraclett.OracleTimeWF1PartitionAvgCountTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.003" classname="streamcruncher.test.func.oraclett.OracleSlidingNewWindowFPerfTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.003" classname="streamcruncher.test.func.oraclett.OracleReStockAlertTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.003" classname="streamcruncher.test.func.h2.H2ClusterHealthTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.003" classname="streamcruncher.test.func.derby.DerbySLAAlertTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.003" classname="streamcruncher.test.func.oracle.OracleMultiStreamEventGeneratorChainTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.004" classname="streamcruncher.test.func.h2.H2SLAAlertTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.004" classname="streamcruncher.test.func.h2.H2RandomRowsWindowFTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.004" classname="streamcruncher.test.func.h2.H2TumblingWF1PartitionEvtWtTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.004" classname="streamcruncher.test.func.ants.AntsShipmentAggregatorTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.004" classname="streamcruncher.test.func.oraclett.OracleCaseWhenClauseTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.004" classname="streamcruncher.test.func.oracle.OracleSlidingWF2PartitionTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.004" classname="streamcruncher.test.func.oraclett.OracleOAFJoinTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.004" classname="streamcruncher.test.func.oracle.OracleTimeWindowFTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.004" classname="streamcruncher.test.func.oracle.OracleSLAAlertCorrelationTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.004" classname="streamcruncher.test.misc.UndoTest" name="test">
+    <skipped/>
+  </testcase>
+  <testcase time="0.004" classname="streamcruncher.test.func.h2.H2SlidingDeadWindowFTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.004" classname="streamcruncher.test.misc.ReusableCountDownLatchTest" name="test">
+    <skipped/>
+  </testcase>
+  <testcase time="0.004" classname="streamcruncher.test.func.oraclett.OracleTimeMaxWindowFTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.004" classname="streamcruncher.test.func.pointbase.PointBaseTopSellingItemsUpdateGroupTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.005" classname="streamcruncher.test.func.h2.H2TopOrLimitClauseTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.005" classname="streamcruncher.test.func.oraclett.OracleSlidingWF2PartitionTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.005" classname="streamcruncher.test.func.h2.H2SlidingWindowFTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.005" classname="streamcruncher.test.func.mysql.MySQLSlidingNewWindowFPerfTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.005" classname="streamcruncher.test.func.oracle.OracleTimeWF2PartitionAggTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.005" classname="streamcruncher.test.func.oraclett.OracleSlidingNewWindowFTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.005" classname="streamcruncher.test.func.mysql.MySQLOAFJoinTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.005" classname="streamcruncher.test.func.mysql.MySQLSlidingWindowFTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.005" classname="streamcruncher.test.func.oraclett.OracleSlidingWindowFTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.005" classname="streamcruncher.test.func.firebird.FirebirdSLAAlertTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.005" classname="streamcruncher.test.func.oracle.OracleTimeWF1ChainedPartitionTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.005" classname="streamcruncher.test.func.solid.SolidTopSellingItemsTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.005" classname="streamcruncher.test.func.solid.SolidSLAAlertTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.005" classname="streamcruncher.test.func.oraclett.OracleTimeWF1PartitionTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.005" classname="streamcruncher.test.func.h2.H2StockPriceComparisonTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.005" classname="streamcruncher.test.func.pointbase.PointBaseSLAAlertTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.005" classname="streamcruncher.test.func.ants.AntsSlidingDeadWindowFTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.005" classname="streamcruncher.test.func.oracle.OracleOAConfigurableFTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.005" classname="streamcruncher.test.func.h2.H2CaseWhenClauseTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.006" classname="streamcruncher.test.func.oracle.OracleSlidingWindowFTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.006" classname="streamcruncher.test.func.oracle.OracleSlidingWF3PartitionWhereTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.006" classname="streamcruncher.test.func.firebird.FirebirdTimeWF1ChainedPartitionTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.006" classname="streamcruncher.test.nonfunc.oraclett.OracleFunctionGCTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.006" classname="streamcruncher.test.func.oraclett.OracleTimeWF1ChainedPartitionTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.006" classname="streamcruncher.test.func.h2.H2TimeWF1ChainedPartitionTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.006" classname="streamcruncher.test.func.ants.AntsOAFJoinTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.006" classname="streamcruncher.test.func.mysql.MySQLSLAAlertTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.006" classname="streamcruncher.test.func.oracle.OracleClusterHealthTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.006" classname="streamcruncher.test.func.oraclett.OracleSlidingWF3PartitionWhereTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.006" classname="streamcruncher.test.func.oracle.OracleTimeMaxWindowFTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.006" classname="streamcruncher.test.func.h2.H2ThreeEventOrderTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.006" classname="streamcruncher.test.func.h2.H2StockPriceComparison2Test" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.006" classname="streamcruncher.test.func.mysql.MySQLTimeMaxWindowFTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.006" classname="streamcruncher.test.func.h2.H2TopSellingItemsTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.006" classname="streamcruncher.test.func.pointbase.PointBaseTimeWindowFPerfTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.006" classname="streamcruncher.test.func.mysql.MySQLTumblingWF1PartitionPauseTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.006" classname="streamcruncher.test.func.oraclett.OracleTopOrLimitClauseTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.006" classname="streamcruncher.test.func.mysql.MySQLTimeWF1PartitionTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.006" classname="streamcruncher.test.func.solid.SolidTimeWF1ChainedPartitionTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.007" classname="streamcruncher.test.func.oraclett.OracleHighestRowsWindowFTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.007" classname="streamcruncher.test.func.pointbase.PointBasePreFilterTriggerTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.007" classname="streamcruncher.test.func.solid.SolidOAConfigurableFTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.007" classname="streamcruncher.test.func.ants.AntsReStockAlertTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.007" classname="streamcruncher.test.func.h2.H2OAFJoinTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.007" classname="streamcruncher.test.func.pointbase.PointBaseShipmentAggregatorTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.007" classname="streamcruncher.test.func.oracle.OracleTimeWF1PartitionTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.007" classname="streamcruncher.test.func.oraclett.OracleTimeWF2PartitionAggTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.007" classname="streamcruncher.test.func.h2.H2TimeMaxWindowFTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.007" classname="streamcruncher.test.func.h2.H2ReStockAlertPerfTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.007" classname="streamcruncher.test.func.h2.H2TimeWindowFTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.007" classname="streamcruncher.test.func.h2.H2TimeWFPartitionWinSizeProviderTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.007" classname="streamcruncher.test.func.oracle.OracleTimeWindowFPerfTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.007" classname="streamcruncher.test.func.mysql.MySQLHighestRowsWindowFTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.007" classname="streamcruncher.test.func.oracle.OracleTumblingWF1PartitionPauseTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.007" classname="streamcruncher.test.func.ants.AntsTopSellingItemsTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.007" classname="streamcruncher.test.func.oracle.OracleHighestRowsWindowFTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.007" classname="streamcruncher.test.func.oracle.OracleSLAAlertTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.008" classname="streamcruncher.test.func.oraclett.OracleRandomRowsWindowFTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.008" classname="streamcruncher.test.func.pointbase.PointBaseTimeWF2PartitionAggTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.008" classname="streamcruncher.test.func.pointbase.PointBaseReStockAlertTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.008" classname="streamcruncher.test.func.ants.AntsSLAAlertTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.008" classname="streamcruncher.test.func.mysql.MySQLSlidingWF2PartitionTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.008" classname="streamcruncher.test.func.oracle.OracleTumblingWF1PartitionEvtWtTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.008" classname="streamcruncher.test.nonfunc.h2.H2StartupShutdown1Test" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.008" classname="streamcruncher.test.func.oraclett.OraclePreFilterTriggerTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.008" classname="streamcruncher.test.func.h2.H2SlidingWFEvtDropTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.008" classname="streamcruncher.test.func.mysql.MySQLTimeWindowFPerfTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.008" classname="streamcruncher.test.func.oraclett.OracleReStockAlertPerfTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.008" classname="streamcruncher.test.func.h2.H2ShipmentAggregatorTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.008" classname="streamcruncher.test.func.h2.H2CorrelationPerfTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.008" classname="streamcruncher.test.func.h2.H2HighestRowsWindowFTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.008" classname="streamcruncher.test.func.h2.H2SlidingNewWindowFTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.008" classname="streamcruncher.test.func.pointbase.PointBaseTimeWF1ChainedPartitionTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.008" classname="streamcruncher.test.func.h2.H2OAConfigurableFTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.008" classname="streamcruncher.test.func.oraclett.OracleSLAAlertTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.008" classname="streamcruncher.test.func.h2.H2TimeWF1PartitionTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.009" classname="streamcruncher.test.func.h2.H2LowestRowsWindowFTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.009" classname="streamcruncher.test.func.h2.H2SlidingWF3PartitionWhereTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.009" classname="streamcruncher.test.func.oracle.OracleOAFJoinTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.009" classname="streamcruncher.test.func.ants.AntsTimeWF2PartitionAggTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.009" classname="streamcruncher.test.func.mysql.MySQLLowestRowsWindowFTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.009" classname="streamcruncher.test.func.derby.DerbyOAConfigurableFTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.009" classname="streamcruncher.test.func.oraclett.OracleSlidingDeadWindowFTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.009" classname="streamcruncher.test.func.pointbase.PointBaseCaseWhenClauseTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.009" classname="streamcruncher.test.func.mysql.MySQLSlidingNewWindowFTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.009" classname="streamcruncher.test.func.h2.H2CorrelationExpressionsTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.009" classname="streamcruncher.test.func.oraclett.OracleTimeWindowFPerfTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.009" classname="streamcruncher.test.func.h2.H2TimeWF1PartitionAvgCountTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.009" classname="streamcruncher.test.func.oracle.OracleTimeWF1PartitionAvgCountTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.009" classname="streamcruncher.test.func.h2.H2PreFilterTriggerTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.009" classname="streamcruncher.test.func.h2.H2TopSellingItemsUpdateGroupTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.009" classname="streamcruncher.test.func.oraclett.OracleTimeWindowFTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.009" classname="streamcruncher.test.func.derby.DerbyTimeWF2PartitionAggTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.009" classname="streamcruncher.test.func.mysql.MySQLSlidingWF3PartitionWhereTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.009" classname="streamcruncher.test.func.mysql.MySQLSlidingDeadWindowFTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.01" classname="streamcruncher.test.func.mysql.MySQLOAConfigurableFTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.01" classname="streamcruncher.test.func.solid.SolidCaseWhenClauseTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.01" classname="streamcruncher.test.func.mysql.MySQLTumblingWF1PartitionEvtWtTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.01" classname="streamcruncher.test.func.firebird.FirebirdOAConfigurableFTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.01" classname="streamcruncher.test.func.h2.H2TumblingWF1PartitionPauseTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.01" classname="streamcruncher.test.nonfunc.mysql.MySQLStartupShutdown1Test" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.01" classname="streamcruncher.test.func.mysql.MySQLTimeWindowFTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.01" classname="streamcruncher.test.func.h2.H2MultiStreamEventGeneratorTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.01" classname="streamcruncher.test.func.oraclett.OracleLowestRowsWindowFTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.01" classname="streamcruncher.test.func.mysql.MySQLTimeWF1PartitionAvgCountTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.01" classname="streamcruncher.test.func.ants.AntsTopSellingItemsUpdateGroupTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.01" classname="streamcruncher.test.func.h2.H2SlidingWF1PartitionTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.01" classname="streamcruncher.test.func.oracle.OracleMultiStreamEventGeneratorTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.01" classname="streamcruncher.test.nonfunc.h2.H2StartupShutdown2Test" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.01" classname="streamcruncher.test.func.oraclett.OracleTumblingWindowFTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.01" classname="streamcruncher.test.func.mysql.MySQLSlidingWFEvtDropTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.01" classname="streamcruncher.test.func.oraclett.OracleTumblingWF1PartitionEvtWtTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.01" classname="streamcruncher.test.func.oracle.OracleTumblingWindowFTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.011" classname="streamcruncher.test.func.oraclett.OracleOAConfigurableFTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.011" classname="streamcruncher.test.func.oraclett.OracleTumblingWF1PartitionPauseTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.011" classname="streamcruncher.test.func.h2.H2TimeWF2PartitionAggTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.011" classname="streamcruncher.test.func.h2.H2TumblingWindowFTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.011" classname="streamcruncher.test.func.oraclett.OracleSlidingWFEvtDropTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.011" classname="streamcruncher.test.nonfunc.oraclett.OracleStartupShutdown1Test" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.011" classname="streamcruncher.test.func.solid.SolidTimeWF2PartitionAggTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.011" classname="streamcruncher.test.func.mysql.MySQLRandomRowsWindowFTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.011" classname="streamcruncher.test.func.h2.H2SlidingWF2PartitionTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.011" classname="streamcruncher.test.func.mysql.MySQLTimeWF1ChainedPartitionTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.011" classname="streamcruncher.test.func.mysql.MySQLTimeWF2PartitionAggTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.011" classname="streamcruncher.test.func.h2.H2MultiStreamEventGeneratorChainTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.011" classname="streamcruncher.test.func.h2.H2OutOfOrderEventTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.011" classname="streamcruncher.test.func.oracle.OracleReStockAlertTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.012" classname="streamcruncher.test.func.firebird.FirebirdOAFJoinTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.012" classname="streamcruncher.test.func.derby.DerbyOAFJoinTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.012" classname="streamcruncher.test.func.solid.SolidTopSellingItemsUpdateGroupTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.012" classname="streamcruncher.test.func.oracle.OraclePreFilterTriggerTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="0.012" classname="streamcruncher.test.func.oracle.OracleSlidingWF1PartitionTest" name="performTest">
+    <skipped/>
+  </testcase>
+  <testcase time="1,803.306" classname="streamcruncher.test.misc.AppendOnlyListTest" name="testReadAvailable"/>
+  <testcase time="32.192" classname="streamcruncher.test.misc.AppendOnlyListTest" name="testRead"/>
+  <testcase time="0.005" classname="streamcruncher.test.misc.FixedKeyHashMapSerTest" name="test"/>
+  <testcase time="13.002" classname="streamcruncher.test.misc.RunnableDelayQueueTest" name="test"/>
+  <testcase time="6.159" classname="streamcruncher.test.misc.TwoDAppendOnlyListTest" name="test"/>
+</testsuite>
