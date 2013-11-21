@@ -52,7 +52,7 @@ public class InputSession {
         inStream = manager.getRegisteredInStream(name);
 
         if (inStream == null) {
-            throw new StreamCruncherException("There is no InStream registered under this name.");
+            throw new StreamCruncherException("There is no InStream registered under the name [" + name + "]");
         }
     }
 

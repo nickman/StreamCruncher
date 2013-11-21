@@ -30,6 +30,7 @@ import java.sql.Timestamp;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicLong;
 
@@ -38,11 +39,12 @@ import streamcruncher.api.OutputSession;
 import streamcruncher.api.ParsedQuery;
 import streamcruncher.api.ParserParameters;
 import streamcruncher.api.QueryConfig;
-import streamcruncher.api.StreamCruncher;
 import streamcruncher.api.QueryConfig.QuerySchedulePolicy;
+import streamcruncher.api.StreamCruncher;
 import streamcruncher.api.annotations.Streamed;
 import streamcruncher.api.annotations.StreamedAttribute;
 import streamcruncher.api.artifact.RowSpec;
+import streamcruncher.innards.InnardsManager;
 
 /**
  * <p>Title: ExampleRun</p>
@@ -99,11 +101,14 @@ public class ExampleRun extends Thread {
 			cruncher.registerInStream(inputStreamName, rowSpec);
 			
 			log("RowSpec:\n" + rowSpec);
-			String rql = "select type, avg from HeapUsageStream " + 
-	              " (partition by type store latest 15 seconds with Average(HeapUsed) as avg) " + 
+			String rql = "select  Type, avgh from HeapUsageStream " + 
+	              //" (partition by type store latest 15 seconds with Average(HeapUsed) as avg) " + 
+	              " (partition by Type store last 15 seconds with avg(HeapUsed) as avgh) " +
 	              " as HeapStr where HeapStr.$row_status is new;";
 			
-			//String rql = "select item_sku, item_qty, order_time,order_id from test (partition store last 5 seconds) as mystream	where mystream.$row_status is new;";
+			// String rql = "select item_sku, item_qty, order_time,order_id 
+			// from test (partition store last 5 seconds) 
+			// as mystream	where mystream.$row_status is new;";
 			
 			
 			
@@ -138,6 +143,7 @@ public class ExampleRun extends Thread {
 			
 			log("Cruncher Started");
 			
+			log("InStreams:%s", InnardsManager.getInstance().getAllRegisteredInStreams().keySet());
 			
 			Thread inputThread = new Thread("InputThread"){
 				HeapUsed heapUsed = new HeapUsed(true);
@@ -145,8 +151,9 @@ public class ExampleRun extends Thread {
 				public void run() {
 					log("Starting...");
 					InputSession inputSession = null;
+					Random random = new Random(System.currentTimeMillis());
 					try {
-						inputSession = cruncher.createInputSession("HeapStream");
+						inputSession = cruncher.createInputSession("HeapUsageStream");
 						inputSession.start();
 					} catch (Exception e) {
 						e.printStackTrace(System.err);
@@ -155,9 +162,11 @@ public class ExampleRun extends Thread {
 					while(true) {
 						heapUsed.update();
 						nonHeapUsed.update();
-						Object[] event = new Object[]{heapUsed.getHeapUsed(), heapUsed.getTimestamp(), heapUsed.getType(), heapUsed.getId()};
+						//Object[] event = new Object[]{heapUsed.getHeapUsed(), heapUsed.getTimestamp(), heapUsed.getType(), heapUsed.getId()};
+						//Object[] event2 = new Object[]{nonHeapUsed.getHeapUsed(), nonHeapUsed.getTimestamp(), nonHeapUsed.getType(), nonHeapUsed.getId()};
+						Object[] event = new Object[]{Math.abs(new Long(random.nextInt(100))), heapUsed.getTimestamp(), heapUsed.getType(), heapUsed.getId()};
+						Object[] event2 = new Object[]{Math.abs(new Long(random.nextInt(100))), nonHeapUsed.getTimestamp(), nonHeapUsed.getType(), nonHeapUsed.getId()};
 						
-						Object[] event2 = new Object[]{nonHeapUsed.getHeapUsed(), nonHeapUsed.getTimestamp(), nonHeapUsed.getType(), nonHeapUsed.getId()};
 						inputSession.submitEvent(event);
 						inputSession.submitEvent(event2);
 						cnt++;
@@ -208,8 +217,8 @@ public class ExampleRun extends Thread {
 		}
 	}
 	
-	public static void log(Object msg) {
-		System.out.println(String.format("%s - [%s]:%s", new Date(), Thread.currentThread().toString(), msg));
+	public static void log(String format, Object... msg) {
+		System.out.println(String.format("%s - [%s]:%s", new Date(), Thread.currentThread().toString(), String.format(format, msg)));
 	}
 
 }

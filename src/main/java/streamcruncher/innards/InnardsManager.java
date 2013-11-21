@@ -57,6 +57,23 @@ import streamcruncher.util.undo.Helper;
  */
 
 public class InnardsManager implements Component {
+	/** The singleton instance */
+	private static volatile InnardsManager instance = null;
+	/** The singleton instance ctor lock */
+	private static final Object lock = new Object();
+	
+	public static InnardsManager getInstance() {
+		if(instance == null) {
+			synchronized(lock) {
+				if(instance == null) {
+					instance = new InnardsManager();
+				}
+			}
+		}
+		return instance;
+	}
+	
+	
     protected final ConcurrentMap<String, InStream> inStreams;
 
     protected final ConcurrentMap<String, RunningQuery> runningQueries;
@@ -67,7 +84,7 @@ public class InnardsManager implements Component {
 
     protected FileManager artifactManager;
 
-    public InnardsManager() {
+    private InnardsManager() {
         inStreams = new ConcurrentHashMap<String, InStream>();
         runningQueries = new ConcurrentHashMap<String, RunningQuery>();
         outStreams = new ConcurrentHashMap<String, OutStream>();

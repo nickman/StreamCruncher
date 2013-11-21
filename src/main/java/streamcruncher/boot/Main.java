@@ -180,7 +180,7 @@ public class Main {
 
         // -------------------
 
-        InnardsManager manager = new InnardsManager();
+        InnardsManager manager = InnardsManager.getInstance();
         manager.start(properties);
 
         registry.setComponentImpl(InnardsManager.class, manager);
