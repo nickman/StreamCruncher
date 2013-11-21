@@ -2,3 +2,5 @@
 /.settings
 /.classpath
 /.project
+*.bak
+dependency-reduced-pom.xml
