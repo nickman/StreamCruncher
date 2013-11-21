@@ -4,7 +4,7 @@
   <test name="SCTests">
     <groups>
       <run>
-       <include name="sc-init-required" />
+       <!-- <include name="sc-init-required" /> -->
 
        <!-- Each DB has be run one at a time. -->
 
@@ -24,7 +24,7 @@
     </groups>
 
     <classes>
-      <class name="streamcruncher.test.Suite" />
+     <!--  <class name="streamcruncher.test.Suite" /> -->
 
       <!--
           These tests has be run only one at a time. Change the groups based on

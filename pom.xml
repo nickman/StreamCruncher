@@ -196,11 +196,35 @@
 					<artifactId>cobertura-maven-plugin</artifactId>
 					<version>${cobertura.version}</version>
 					<configuration>
+						<instrumentation>
+	            <includes>
+	              <include>streamcruncher/**/*.class</include>
+	            </includes>
+	          </instrumentation>						
 					  <formats>
 					    <format>html</format>
 					    <format>xml</format>
 					  </formats>
 					</configuration>
+			    <executions>
+			      <execution>
+			        <id>clean</id>
+			        <phase>clean</phase>
+			        <goals>
+			          <goal>clean</goal>
+			        </goals>
+			      </execution>
+						<execution>
+              <id>instrument-code</id>
+              <phase>process-classes</phase>
+              <goals>
+                <goal>instrument</goal>
+              </goals>
+              <configuration>
+                <attach>true</attach>
+              </configuration>
+            </execution>			      
+			    </executions>					
 				</plugin>	    
 				<!--
 					Eclipse Plugin
@@ -267,6 +291,11 @@
 	        <configuration>
 	          <xmlOutput>true</xmlOutput>
 	        </configuration>        
+	      </plugin>
+			 <plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>cobertura-maven-plugin</artifactId>
+					<version>${cobertura.version}</version>
 	      </plugin>
 	    </plugins>
 	  </reporting>
