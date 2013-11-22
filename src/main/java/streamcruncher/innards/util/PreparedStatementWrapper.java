@@ -288,4 +288,21 @@ public abstract class PreparedStatementWrapper extends StatementWrapper implemen
     public void setUnicodeStream(int parameterIndex, InputStream x, int length) throws SQLException {
         this.realPreparedStatement.setUnicodeStream(parameterIndex, x, length);
     }
+
+	/**
+	 * @throws SQLException
+	 * @see java.sql.Statement#closeOnCompletion()
+	 */
+	public void closeOnCompletion() throws SQLException {
+		realPreparedStatement.closeOnCompletion();
+	}
+
+	/**
+	 * @return
+	 * @throws SQLException
+	 * @see java.sql.Statement#isCloseOnCompletion()
+	 */
+	public boolean isCloseOnCompletion() throws SQLException {
+		return realPreparedStatement.isCloseOnCompletion();
+	}
 }

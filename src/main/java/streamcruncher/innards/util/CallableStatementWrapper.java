@@ -517,4 +517,28 @@ public abstract class CallableStatementWrapper extends PreparedStatementWrapper 
     public boolean wasNull() throws SQLException {
         return realCallableStatement.wasNull();
     }
+
+	/**
+	 * @param parameterIndex
+	 * @param type
+	 * @return
+	 * @throws SQLException
+	 * @see java.sql.CallableStatement#getObject(int, java.lang.Class)
+	 */
+	public <T> T getObject(int parameterIndex, Class<T> type)
+			throws SQLException {
+		return realCallableStatement.getObject(parameterIndex, type);
+	}
+
+	/**
+	 * @param parameterName
+	 * @param type
+	 * @return
+	 * @throws SQLException
+	 * @see java.sql.CallableStatement#getObject(java.lang.String, java.lang.Class)
+	 */
+	public <T> T getObject(String parameterName, Class<T> type)
+			throws SQLException {
+		return realCallableStatement.getObject(parameterName, type);
+	}
 }

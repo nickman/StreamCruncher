@@ -215,4 +215,21 @@ public abstract class StatementWrapper implements Statement {
     public <T> T unwrap(Class<T> iface) throws SQLException {
         throw new SQLException("Unsupported operation");
     }
+
+	/**
+	 * @throws SQLException
+	 * @see java.sql.Statement#closeOnCompletion()
+	 */
+	public void closeOnCompletion() throws SQLException {
+		realStatement.closeOnCompletion();
+	}
+
+	/**
+	 * @return
+	 * @throws SQLException
+	 * @see java.sql.Statement#isCloseOnCompletion()
+	 */
+	public boolean isCloseOnCompletion() throws SQLException {
+		return realStatement.isCloseOnCompletion();
+	}
 }

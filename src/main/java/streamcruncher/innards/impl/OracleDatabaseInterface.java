@@ -285,6 +285,8 @@ public class OracleDatabaseInterface extends DatabaseInterface {
             OracleResultSetWrapper wrapper = new OracleResultSetWrapper(this, resultSet);
             return wrapper;
         }
+
+
     }
 
     public static class OraclePreparedStatementWrapper extends PreparedStatementWrapper {
@@ -442,5 +444,7 @@ public class OracleDatabaseInterface extends DatabaseInterface {
 
             return ts;
         }
+
+
     }
 }

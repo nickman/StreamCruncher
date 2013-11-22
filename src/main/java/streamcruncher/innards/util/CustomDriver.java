@@ -24,7 +24,9 @@ import java.sql.Connection;
 import java.sql.Driver;
 import java.sql.DriverPropertyInfo;
 import java.sql.SQLException;
+import java.sql.SQLFeatureNotSupportedException;
 import java.util.Properties;
+import java.util.logging.Logger;
 
 import streamcruncher.boot.ConfigKeys;
 
@@ -96,4 +98,13 @@ public class CustomDriver implements Driver {
     protected Connection wrapNewConnection(Connection connection) {
         return connection;
     }
+
+	/**
+	 * @return
+	 * @throws SQLFeatureNotSupportedException
+	 * @see java.sql.Driver#getParentLogger()
+	 */
+	public Logger getParentLogger() throws SQLFeatureNotSupportedException {
+		return realDriver.getParentLogger();
+	}
 }

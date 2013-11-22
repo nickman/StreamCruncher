@@ -848,4 +848,27 @@ public abstract class ResultSetWrapper implements ResultSet {
     public <T> T unwrap(Class<T> iface) throws SQLException {
         throw new SQLException("Unsupported operation");
     }
+
+	/**
+	 * @param columnIndex
+	 * @param type
+	 * @return
+	 * @throws SQLException
+	 * @see java.sql.ResultSet#getObject(int, java.lang.Class)
+	 */
+	public <T> T getObject(int columnIndex, Class<T> type) throws SQLException {
+		return realResultSet.getObject(columnIndex, type);
+	}
+
+	/**
+	 * @param columnLabel
+	 * @param type
+	 * @return
+	 * @throws SQLException
+	 * @see java.sql.ResultSet#getObject(java.lang.String, java.lang.Class)
+	 */
+	public <T> T getObject(String columnLabel, Class<T> type)
+			throws SQLException {
+		return realResultSet.getObject(columnLabel, type);
+	}
 }

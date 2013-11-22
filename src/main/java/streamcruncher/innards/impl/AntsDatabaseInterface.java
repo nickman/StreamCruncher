@@ -326,6 +326,17 @@ public class AntsDatabaseInterface extends DatabaseInterface {
                 super.setObject(parameterIndex, x);
             }
         }
+
+		@Override
+		public void closeOnCompletion() throws SQLException {
+			super.closeOnCompletion();
+			
+		}
+
+		@Override
+		public boolean isCloseOnCompletion() throws SQLException {
+			return super.isCloseOnCompletion();
+		}
     }
 
     public static class AntsCallableStatementWrapper extends CallableStatementWrapper {
@@ -434,5 +445,7 @@ public class AntsDatabaseInterface extends DatabaseInterface {
         public void setObject(String parameterName, Object x) throws SQLException {
             super.setObject(parameterName, x);
         }
+
+
     }
 }

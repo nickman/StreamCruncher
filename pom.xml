@@ -292,11 +292,13 @@
 	          <xmlOutput>true</xmlOutput>
 	        </configuration>        
 	      </plugin>
+<!--
 			 <plugin>
 					<groupId>org.codehaus.mojo</groupId>
 					<artifactId>cobertura-maven-plugin</artifactId>
 					<version>${cobertura.version}</version>
 	      </plugin>
+-->
 	    </plugins>
 	  </reporting>
 
